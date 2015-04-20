@@ -1,0 +1,7 @@
+{
+  "test": {
+    "storage": "test/db/test.sqlite",
+    "dialect": "sqlite",
+    "logging": false
+  }
+}

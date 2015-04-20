@@ -1,0 +1,38 @@
+{
+  "name": "sequelize-qt",
+  "version": "0.0.2",
+  "description": "Sequelize Query Tool",
+  "main": "index.js",
+  "scripts": {
+    "test": "NODE_ENV=test mocha --compilers coffee:coffee-script/register"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/syeo/sequelize-qt.git"
+  },
+  "keywords": [
+    "sequelize",
+    "query",
+    "tool",
+    "query-tool"
+  ],
+  "author": "Stanley Yeo <yyoud88@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/syeo/sequelize-qt/issues"
+  },
+  "homepage": "https://github.com/syeo/sequelize-qt",
+  "devDependencies": {
+    "bluebird": "^2.9.24",
+    "chai": "^2.2.0",
+    "chai-as-promised": "^5.0.0",
+    "lodash": "^3.7.0",
+    "mocha": "^2.2.4",
+    "sequelize": "^2.0.6",
+    "sqlite3": "^3.0.5"
+  },
+  "dependencies": {
+    "coffee-script": "^1.9.2",
+    "data-lens": "0.0.12"
+  }
+}
