@@ -21,8 +21,7 @@ q = Query.where(c).limit(5); // ... WHERE c LIMIT 5
 q = Query.where(c).order("'id' DESC"); // ... WHERE c ORDER BY `...`.`id` DESC
 q = Query.where(c).limit(5).offset(10); // ... WHERE c LIMIT 5 OFFSET 10
 
-// .end() before .find(...) or .findAll(...)
-
+// .end() when .find(...) or .findAll(...)
 model.find(q.end());
 model.findAll(q.end());
 ```
