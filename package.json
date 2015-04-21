@@ -1,6 +1,6 @@
 {
   "name": "sequelize-qt",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Sequelize Query Tool",
   "main": "index.js",
   "scripts": {
