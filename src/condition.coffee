@@ -1,3 +1,21 @@
+operators = [
+  'gt'
+  'gte'
+  'lt'
+  'lte'
+  'ne'
+  'between'
+  'notBetween'
+  'in'
+  'like'
+  'notLike'
+  'iLike'
+  'notILike'
+  'overlap'
+  'contains'
+  'contained'
+]
+
 class Condition
   @and: (conditions...) ->
     new Condition({ $and: conditions.map((condition) -> condition.end()) })
@@ -9,6 +27,7 @@ class Condition
     new Condition({ $not: [condition.end()] })
 
   constructor: (@data = {})->
+    that = @
 
   and: (conditions...) => Condition.and(@, conditions...)
 
@@ -23,5 +42,11 @@ factory.and = Condition.and
 factory.or = Condition.or
 factory.not = Condition.not
 factory.class = Condition
+factory.eq = (l, r) -> new Condition({ "#{l}": r })
+
+operators.forEach((operator) ->
+  factory[operator] = (l, r) ->
+    new Condition({ "#{l}": { "$#{operator}": r } })
+)
 
 module.exports = factory
