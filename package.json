@@ -1,6 +1,6 @@
 {
   "name": "sequelize-qt",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Sequelize Query Tool",
   "main": "index.js",
   "scripts": {
@@ -33,6 +33,6 @@
   },
   "dependencies": {
     "coffee-script": "^1.9.2",
-    "data-lens": "0.0.12"
+    "data-lens": "0.0.14"
   }
 }
